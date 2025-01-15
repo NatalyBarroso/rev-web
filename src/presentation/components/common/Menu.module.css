@@ -1,0 +1,77 @@
+.menuContainer {
+  position: fixed;
+  margin: 2rem -300px;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  will-change: transform;
+}
+
+.menuContainer.open {
+  transform: translateX(300px);
+}
+
+.menuContent {
+  min-width: 240px;
+  height: 540px;
+  margin: 4rem 0;
+  border: #000000 1px solid;
+  border-radius: 20px;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  left: 0;
+  background-color: rgba(90, 129, 143, 0.3);
+}
+
+.searchBar {
+  width: 60%;
+  max-width: 700px;
+  display: flex;
+  padding: 5px 30px;
+  margin-top: 3rem;
+  align-items: center;
+  position: relative;
+}
+
+.searchBar input {
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  padding: 3px;
+  outline: none;
+  color: #000000;
+  padding: 3px 3px 3px 35px;
+}
+
+.icon {
+  color: #06687D;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40%;
+  margin-left: 30%;
+}
+
+.menuItem {
+  display: flex;
+  text-align: justify;
+  cursor: pointer;
+  gap: 10px;
+  margin: 12px;
+  font-weight: bolder;
+}
+
+.menuItem svg {
+  font-size: 20px;
+  color: #D9D9D9;
+}

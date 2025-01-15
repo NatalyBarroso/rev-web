@@ -1,0 +1,91 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28rem;
+}
+
+.slides {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.slidePrevious {
+  transform: translateX(-60%) scale(0.8);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.slideNext {
+  transform: translateX(60%) scale(0.8);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.sliderCurrent {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+  /* width: 60%; */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 0 0 8px 8px;
+}
+
+.title {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.year {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.slidePrevious:hover,
+.slideNext:hover {
+  opacity: 0.8;
+  transform: translateX(-55%) scale(0.85);
+}
+
+.slideNext:hover {
+  transform: translateX(55%) scale(0.85);
+}
